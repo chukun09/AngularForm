@@ -1,0 +1,33 @@
+table {
+    margin-top: 15px;
+    overflow: scroll; 
+    border-spacing: 0;
+}
+.content{
+    height: 100%;
+    width: 100%;
+    border-left: 1px solid #e5e5e5;
+}
+#tablecontainer{
+    margin-top: 5px;
+    height: 70%;
+    overflow-y: scroll;
+    border-collapse: separate;
+}
+table thead th{
+    font-size: 15px;
+    font-family: 'googleblack';
+    white-space: nowrap;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background-color: #ffffff;
+}
+table tbody td{
+    white-space: nowrap;
+    font-size: 13px;
+    font-family: 'regular';
+}
+tr:nth-child(even) {
+    background-color: #e5e5e5;
+  }

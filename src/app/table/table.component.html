@@ -1,0 +1,34 @@
+<!-- <div class="content">
+  <div id="tablecontainer">
+    <table class="table table-responsive w-100 d-block d-md-table">
+      <thead class="thead-inverse">
+        <tr>
+          <th>
+            <input type="checkbox" (click)="select()" [(ngModel)]="selectall" />
+          </th>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Email Address</th>
+          <th>Region Code</th>
+          <th>Phone Number</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody id="tbodytable">
+        <tr *ngFor="let data of datas" >
+          <td>
+            <input type="checkbox" [(ngModel)]="data.isSelected" (change)="isAllSelected()">
+          </td>
+          <td scope="row">{{ data.id }}</td>
+          <td>{{ data.name }}</td>
+          <td>{{data.emailAddress }}</td>
+          <td>{{ data.phones[0].number }}</td>
+          <td>{{ data.phones[0].number }}</td>
+          <td><button type="button" (click)="editPersonInfor(data.id)">Edit</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button type="button" (click)="delete()">Delete</button>
+  <button type="button"><a routerLink="/second-component" routerLinkActive="active">Add New Person</a></button>
+</div> -->

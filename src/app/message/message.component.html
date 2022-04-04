@@ -1,0 +1,9 @@
+<h1>Message</h1>
+<div *ngIf="showMessage">
+    Click on the bell to show all {{signaldata.length}} notifications. <button type="button" (click)="showData()">Show</button>
+</div>
+<div *ngIf="!showMessage">
+    <h2 *ngFor="let message of signaldata">
+        {{message.information}}
+    </h2>
+</div>

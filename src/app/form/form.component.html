@@ -1,0 +1,32 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+  <label for="first-name">First Name: </label>
+  <input id="first-name" type="text" formControlName="name">
+
+  <label for="last-name">Last Name: </label>
+  <input id="last-name" type="text" formControlName="surName">
+
+  <label for="email-address">Email Address: </label>
+  <input type="text" formControlName="emailAddress">
+  <div formArrayName="listPhone">
+    <div *ngFor="let phone of listPhone.controls; let i=index">
+      <div [formGroupName]="i" class="listPhones">
+        <div class="phoneNumber">
+          <label for="phone-number">Phone Number:</label>
+          <input type="text" formControlName="number">
+        </div>
+        <div class="regionCode">
+          <label for="regionCode">Region Code:</label>
+          <input type="text" formControlName="regionCode">
+        </div>
+        <button (click)="removePhone(i)">Remove</button>
+      </div>
+    </div>
+  </div>
+  <p *ngIf="!profileForm.valid">Complete the form to enable button.</p>
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+<p>
+  <button type="button" (click)="newPhone()">Add New Phone Number</button>
+  <button type="button"><a routerLink="/first-component" routerLinkActive="active">Return HomePage</a></button>
+</p>

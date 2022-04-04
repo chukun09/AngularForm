@@ -1,0 +1,8 @@
+:host {
+    font-style: italic;
+    color: red;
+  }
+  :host(.active) {
+    font-weight: bold;
+    color: blue;
+  }
